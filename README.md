@@ -1,13 +1,13 @@
 INSTALLATION INSTRUCTIONS
  - Install Node.js
-    -- https://nodejs.org/en/download/
+     https://nodejs.org/en/download/
  - Install Angular CLI (use Node Package Manager (NPM) to install angular command line tools)
-    -- npm install -g @angular/cli
+     npm install -g @angular/cli
  -  Clone Repo
  -  Install node modules (cd into project directory file)
-    -- npm install
+     npm install
  -  Run client(use angular cli tools to start server. Run command in same location as previous step)
-    -- ng serve
+     ng serve
  
 
 # CandidateUI
