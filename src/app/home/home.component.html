@@ -1,0 +1,81 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Candidate Results</h1>
+      <p class="lead">This is a page to view candidates and filter them</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-9">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+              <th scope="col">First Name</th>
+              <th scope="col">Last Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Zip Code</th>
+              <th scope="col">Phone Number</th>
+              <th scope="col"><a>Qualifications</a></th>
+
+
+            </tr>
+            </thead>
+            <tbody *ngIf="candidates$.length > 0">
+            <tr *ngFor="let candidate of candidates$" >
+                <td>{{candidate.FirstName}}</td>
+                <td>{{candidate.LastName}}</td>
+                <td>{{candidate.Email}}</td>
+                <td>{{candidate.ZipCode}}</td>
+                <td>{{candidate.PhoneNumber}}</td>
+                <td><a class="btn btn-primary show" role="button" [routerLink]="['/showQualification', candidate.ID]">Show</a><span>   </span><a  class="btn btn-primary" role="button" [routerLink]="['/createQualification', candidate.ID]">Add</a></td>
+            </tr>
+
+            </tbody>
+          </table>
+          <p *ngIf="candidates$.length == 0">No results found!</p>
+
+    </div>
+      <div class="col-3">
+          <form [formGroup]="formGroup" (validSubmit)="onSubmit">
+        <div class="form-group form-inline row">
+            <label class="control-label col-5">First Name</label>
+            <input type="text" class="form-control ml-2 col-5" type="text" formControlName="FirstName">
+        </div>
+        <div class="form-group form-inline row" >
+            <label class="control-label col-5">Last Name</label>
+            <input type="text" class="form-control ml-2 col-5" type="text" formControlName="LastName">
+        </div>
+        <div class="form-group form-inline row" >
+            <label class="control-label col-5">Email</label>
+            <input type="text" class="form-control ml-2 col-5" type="text" formControlName="Email">
+        </div>
+        <div class="form-group form-inline row" >
+            <label class="control-label col-5">Zip Code</label>
+            <input type="text" class="form-control ml-2 col-5" type="text" formControlName="ZipCode">
+        </div>
+        <div class="form-group form-inline row" >
+            <label class="control-label col-5">Phone Number</label>
+            <input type="text" class="form-control ml-2 col-5" type="text" formControlName="PhoneNumber">
+        </div>
+        <div class="form-group form-inline row" >
+            <label class="control-label col-5">Name</label>
+            <input type="text" class="form-control ml-2 col-5" type="text" formControlName="Name">
+        </div>
+        <div class="form-group form-inline row" >
+            <label class="control-label col-5">Date</label>
+            <input type="text" class="form-control ml-2 col-5" type="date" formControlName="Date">
+        </div>
+        <div class="form-group form-inline row" >
+            <label class="control-label col-5">Type</label>
+            <input type="text" class="form-control ml-2 col-5" type="text" formControlName="Type">
+        </div>
+        <button type="submit" (click)="Submit()" class="btn btn-primary">Submit</button>
+      </form>
+      </div>
+
+
+  </div>
+
+
+
+
+

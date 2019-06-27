@@ -1,0 +1,35 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Show Qualifications </h1>
+      <p class="lead">This is a page to show the qualifications for the selected candidate</p>
+    </div>
+  </div>
+<div>
+    <div class="col-9">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Type</th>
+              <th scope="col">Date Started</th>
+              <th scope="col">Date Completed</th>
+
+
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let qualification of qualifications" >
+                <td>{{qualification.Name}}</td>
+                <td>{{qualification.Type}}</td>
+                <td>{{qualification.DateStarted}}</td>
+                <td>{{qualification.DateCompleted}}</td>
+
+            </tr>
+
+            </tbody>
+          </table>
+
+      </div>
+
+</div>

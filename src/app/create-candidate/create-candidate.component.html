@@ -1,0 +1,39 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Create Candidate </h1>
+      <p class="lead">This is a page to create a candidate</p>
+    </div>
+  </div>
+<div class="row">
+  <div class="col-6">
+
+  </div>
+  <div class="col-6">
+      <form [formGroup]="formGroup" (validSubmit)="onSubmit()">
+          <div class="form-group form-inline row">
+            <label class="control-label col-4">First Name:</label>
+            <input formControlName="FirstName" type="text" class="form-control col-4"  placeholder="Enter first name">
+          </div>
+          <div class="form-group form-inline row">
+            <label class="control-label col-4">Last Name:</label>
+            <input formControlName="LastName" type="text" class="form-control col-4"  placeholder="Enter last name">
+          </div>
+          <div class="form-group form-inline row">
+              <label class="control-label col-4">Email:</label>
+              <input formControlName="Email" type="text" class="form-control col-4"  placeholder="Enter email">
+          </div>
+          <div class="form-group form-inline row">
+              <label class="control-label col-4">Phone Number:</label>
+              <input formControlName="PhoneNumber" type="text" class="form-control col-4"  placeholder="Enter phone number">
+          </div>
+          <div class="form-group form-inline row">
+              <label class="control-label col-4">Zip Code:</label>
+              <input formControlName="ZipCode" type="text" class="form-control col-4"  placeholder="Enter zipcode">
+            </div>
+
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+  </div>
+</div>
+
